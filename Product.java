@@ -19,6 +19,8 @@ public class Product {
 		_price = price;
 	}
 
+	
+
 	/**
 	 * Returns the product title.
 	 * @return Title.
