@@ -2,31 +2,42 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 
+
+
 @RunWith(Parameterized.class)
 public class ShoppingCartTest {
 	
 	
-	Product pdc1;
+	/*Product pdc1;
 	Product pdc2;
-	Product pdc3;
+	Product pdc3;*/
 	ShoppingCart Sc;
+	ShoppingCart Sc2;
 	
 	
 	
 	
 	
-	
-	public ShoppingCartTest(Product pro1,Product pro2,Product pro3) {
+	public ShoppingCartTest(ShoppingCart sc1,ShoppingCart sc2) {
 		super();
-		this.pdc1=pro1;
+		
+		 this.Sc=sc1;
+		 this.Sc2=sc2;
+		
+		/*this.pdc1=pro1;
 		this.pdc2=pro2;
-		this.pdc3=pro3;
+		this.pdc3=pro3;*/
+		
+		/*Sc.addItem(pdc1);
+		Sc.addItem(pdc2);
+		Sc.addItem(pdc3);*/
 		
 		
 	}
@@ -42,6 +53,12 @@ public class ShoppingCartTest {
 		conpro[2] = new Product ("Peli3",27.1);
 		parametros.add(conpro);
 		
+		Product[] conpro2 = new Product[3];
+		conpro2[0] = new Product ("Peli4",27.1);
+		conpro2[1] = new Product ("Peli5",20.5);
+		conpro2[2] = new Product ("Peli6",18.0);
+		parametros.add(conpro);
+		
 		
 		return parametros;
 	}
@@ -49,38 +66,36 @@ public class ShoppingCartTest {
 	
 
 	@Test
-	public void testShoppingCart() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testGetBalance() {
-		fail("Not yet implemented");
+		
+		Assert.assertEquals(Sc.getBalance(),Sc2.getBalance());
+	
+		
 	}
 
 	@Test
 	public void testAddItem() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
 	public void testRemoveItem() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
 	public void testGetItemCount() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
 	public void testEmpty() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
 	public void testIsEmpty() {
-		fail("Not yet implemented");
+		
 	}
 
 }
